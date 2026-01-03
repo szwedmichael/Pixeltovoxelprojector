@@ -1,0 +1,46 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+# Core scientific computing
+numpy = "*"
+
+# Computer vision and image processing
+opencv-python = "*"
+
+# 3D visualization
+pyvista = "*"
+
+# Astronomy/FITS file handling
+astropy = "*"
+
+# Plotting
+matplotlib = "*"
+
+# C++ Python bindings
+pybind11 = "*"
+
+[dev-packages]
+# Development tools (optional)
+
+[requires]
+python_version = "3.8"
+
+[scripts]
+# Webcam tools
+record = "python webcam_recorder.py"
+calibrate = "python webcam_calibration.py"
+
+# Example generation
+example-sky = "python webcam_calibration.py --example-sky"
+example-object = "python webcam_calibration.py --example"
+
+# Processing and visualization
+process-video = "python PixelationDecensorer.py"
+view-voxels = "python voxelmotionviewer.py"
+view-space = "python spacevoxelviewer.py"
+
+# Build C++ extension
+build-cpp = "python setup.py build_ext --inplace"
